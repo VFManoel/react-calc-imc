@@ -4,9 +4,20 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.main{
+  padding-bottom: 50px;
+}
 .headerContainer {
   max-width: 900px;
   margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerContainer p{
+  font-size: 10px;
+  margin-left: -20px;
+  color: #3a4b5c;
 }
 .container {
   display: flex;
@@ -88,4 +99,28 @@ body {
 }
 .container .rightSide .rightArrow:hover {
   opacity: 90%;
+}
+
+@media (max-width: 770px) {
+  .headerContainer {
+    margin: 0;
+  }
+  header {
+    padding: 0 20px;
+  }
+  .container {
+    padding: 0 20px;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .container .rightSide .rightArrow {
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .container .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
 }

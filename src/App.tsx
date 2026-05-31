@@ -28,7 +28,8 @@ const App = () => {
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          <img src={poweredImage} alt="" width={150} />
+          <img src={poweredImage} alt="" width={100} />
+          <p>powered by Manoel Victor Ferreira</p>
         </div>
       </header>
       <div className={styles.container}>
