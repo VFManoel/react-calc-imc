@@ -18,8 +18,9 @@ export const calculateBmi = (height: number, weight: number) => {
 
   for (let i in levels) {
     if (bmi >= levels[i].bmi[0] && bmi < levels[i].bmi[1]) {
-            levels[i].yourBmi = bmi;
-      return levels[i];
+      let LevelCopy: Level = { ...levels[i] };
+      LevelCopy.yourBmi = parseFloat(bmi.toFixed(2));
+      return LevelCopy;
     }
   }
   return null;

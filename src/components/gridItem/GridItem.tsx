@@ -18,6 +18,11 @@ export const GridItem = ({ item }: Props) => {
         />
       </div>
       <div className={styles.gridTitle}>{item.title}</div>
+
+    {item.yourBmi &&
+        <div className={styles.yourBmi}>Your BMI is {item.yourBmi}kg/m²</div>
+    }
+
       <div className={styles.gridInfo}>
         <>
         Between <strong>{item.bmi[0]}</strong> and <strong>{item.bmi[1]}</strong>
