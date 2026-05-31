@@ -18,11 +18,11 @@ const App = () => {
     }
   };
 
-  const handleBackButton = () =>{
+  const handleBackButton = () => {
     setToShow(null);
     setHeightField(0);
     setWeightField(0);
-  }
+  };
 
   return (
     <div className={styles.main}>
@@ -45,15 +45,22 @@ const App = () => {
             placeholder="Type your height (in meters)"
             value={heightField > 0 ? heightField : ""}
             onChange={(e) => setHeightField(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
           <input
             type="number"
             placeholder="Type your weight (in kilograms)"
             value={weightField > 0 ? weightField : ""}
             onChange={(e) => setWeightField(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
 
-          <button onClick={handleCalculateButton}>CALCULATE</button>
+          <button
+            onClick={handleCalculateButton}
+            disabled={toShow ? true : false}
+          >
+            CALCULATE
+          </button>
         </div>
         <div className={styles.rightSide}>
           {!toShow && (
